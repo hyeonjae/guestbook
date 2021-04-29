@@ -34,7 +34,7 @@ go 프로젝트 구조입니다.
 ## uber.fx
 
 ```go
-// main.go
+// cmd/guestbook/main.go
 func main() {
 	app := fx.New(
 		fx.Provide(
@@ -47,10 +47,7 @@ func main() {
 	)
 	// ...
 }
-```
 
-```go
-// cmd/guestbook/main.go
 func serve(lc fx.Lifecycle, guestbook *bootstrap.Guestbook) {
 	lc.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {
@@ -88,7 +85,7 @@ gateway <--- usecase <--- service <--- adapter
 
 main 은 의존성 주입 관계를 명시하고, fx를 실행시킵니다.  
 bootstrap 는 앱이 구동되는 동안 실행되어야 할 서버 (http server, grpc server)나 백그라운드 작업 (tick 등)을 실행시키는 레이어입니다.  
-gateway 에는 grcp 나 http server 의 endpoint 를 정의합니다.   
+gateway 에는 grpc 나 http server 의 endpoint 를 정의합니다.   
 usecase 에는 gateway 의 endpoint 에서 구현이 필요한 부분을 이곳에 구현합니다.
 service 에는 비즈니스 로직을 구현합니다.
 
