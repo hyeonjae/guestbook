@@ -8,9 +8,9 @@ option java_outer_classname = "GuestbookProto";
 option java_package = "com.daangn.guestbook.v1";
 
 service Guestbook {
-  rpc Create (CreateRequest) returns (CreateResponse) {}
-  rpc List (ListRequest) returns (ListResponse) {}
-  rpc Get (GetRequest) returns (GetResponse) {}
+  rpc Create (CreateRequest) returns (CreateResponse);
+  rpc List (ListRequest) returns (ListResponse);
+  rpc Get (GetRequest) returns (GetResponse);
 }
 
 message CreateRequest {
