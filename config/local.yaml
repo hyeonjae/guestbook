@@ -1,0 +1,18 @@
+listen: ":8081"
+
+grpc:
+  max_connection_idle: "15s"
+  max_connection_age: "30s"
+  max_connection_age_grace: "15s"
+  time: "15s"
+  timeout: "10s"
+
+mysql:
+  address: "localhost:3306"
+  username: "admin"
+  password: "admin"
+  database: "guestbook"
+
+redis:
+  address: "localhost:6379"
+  password: "admin"
