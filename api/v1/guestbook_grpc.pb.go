@@ -33,7 +33,7 @@ func NewGuestbookClient(cc grpc.ClientConnInterface) GuestbookClient {
 
 func (c *guestbookClient) Create(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*CreateResponse, error) {
 	out := new(CreateResponse)
-	err := c.cc.Invoke(ctx, "/daangn.guestbook.v1.Guestbook/Create", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/hyeonjae.guestbook.v1.Guestbook/Create", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -42,7 +42,7 @@ func (c *guestbookClient) Create(ctx context.Context, in *CreateRequest, opts ..
 
 func (c *guestbookClient) List(ctx context.Context, in *ListRequest, opts ...grpc.CallOption) (*ListResponse, error) {
 	out := new(ListResponse)
-	err := c.cc.Invoke(ctx, "/daangn.guestbook.v1.Guestbook/List", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/hyeonjae.guestbook.v1.Guestbook/List", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -51,7 +51,7 @@ func (c *guestbookClient) List(ctx context.Context, in *ListRequest, opts ...grp
 
 func (c *guestbookClient) Get(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*GetResponse, error) {
 	out := new(GetResponse)
-	err := c.cc.Invoke(ctx, "/daangn.guestbook.v1.Guestbook/Get", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/hyeonjae.guestbook.v1.Guestbook/Get", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -104,7 +104,7 @@ func _Guestbook_Create_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/daangn.guestbook.v1.Guestbook/Create",
+		FullMethod: "/hyeonjae.guestbook.v1.Guestbook/Create",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GuestbookServer).Create(ctx, req.(*CreateRequest))
@@ -122,7 +122,7 @@ func _Guestbook_List_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/daangn.guestbook.v1.Guestbook/List",
+		FullMethod: "/hyeonjae.guestbook.v1.Guestbook/List",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GuestbookServer).List(ctx, req.(*ListRequest))
@@ -140,7 +140,7 @@ func _Guestbook_Get_Handler(srv interface{}, ctx context.Context, dec func(inter
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/daangn.guestbook.v1.Guestbook/Get",
+		FullMethod: "/hyeonjae.guestbook.v1.Guestbook/Get",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GuestbookServer).Get(ctx, req.(*GetRequest))
@@ -152,7 +152,7 @@ func _Guestbook_Get_Handler(srv interface{}, ctx context.Context, dec func(inter
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Guestbook_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "daangn.guestbook.v1.Guestbook",
+	ServiceName: "hyeonjae.guestbook.v1.Guestbook",
 	HandlerType: (*GuestbookServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -6,8 +6,6 @@ import (
 	"time"
 
 	"gopkg.in/yaml.v2"
-
-	"github.com/daangn/guestbook/cmd/guestbook/cli"
 )
 
 type Config struct {
@@ -37,7 +35,7 @@ type Redis struct {
 	Password string `yaml:"password"`
 }
 
-func NewConfig(flags *cli.Flags) (*Config, error) {
+func NewConfig(flags *Flags) (*Config, error) {
 	return parse(flags.ConfigPath)
 }
 

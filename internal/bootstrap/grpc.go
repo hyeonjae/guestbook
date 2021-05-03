@@ -6,9 +6,9 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 
-	apiv1 "github.com/daangn/guestbook/api/v1"
-	"github.com/daangn/guestbook/internal/config"
-	"github.com/daangn/guestbook/internal/gateway"
+	apiv1 "github.com/hyeonjae/guestbook/api/v1"
+	"github.com/hyeonjae/guestbook/internal/config"
+	"github.com/hyeonjae/guestbook/internal/gateway"
 )
 
 type Guestbook struct {

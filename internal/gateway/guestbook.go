@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	apiv1 "github.com/daangn/guestbook/api/v1"
+	apiv1 "github.com/hyeonjae/guestbook/api/v1"
 )
 
 type Guestbook struct {

@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package daangn.guestbook.v1;
+package hyeonjae.guestbook.v1;
 
 option go_package = "api/v1";
 option java_multiple_files = true;
 option java_outer_classname = "GuestbookProto";
-option java_package = "com.daangn.guestbook.v1";
+option java_package = "com.hyeonjae.guestbook.v1";
 
 service Guestbook {
   rpc Create (CreateRequest) returns (CreateResponse) {}
